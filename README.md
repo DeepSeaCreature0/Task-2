@@ -1,6 +1,6 @@
 # Task2
 
-Run these commands
+Run these commands after going to task/ directory
 ```sh
 docker build -t my_django_app .
 ```
