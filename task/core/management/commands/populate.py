@@ -1,4 +1,3 @@
-# Importing necessary modules
 from django.core.management.base import BaseCommand
 import requests
 from datetime import datetime
@@ -15,20 +14,16 @@ class Command(BaseCommand):
         response = requests.get(url)
         data = response.json()
 
-        # Dummy Launch Country
         countries = ['USA', 'Russia', 'China', 'India', 'France', 'Japan', 'UK', 'Germany', 'Italy', 'Canada']
         count = 0
 
-        # CSV file path
         csv_file_path = 'satellites_data.csv'
 
-        # Create LaunchCountry instances from countries list
         existing_countries = []
         for country_name in countries:
             country, created = LaunchCountry.objects.get_or_create(name=country_name)
             existing_countries.append(country)
 
-        # Populate Satellites table and create CSV file
         with open(csv_file_path, 'w', newline='') as csv_file:
             fieldnames = [
                 'object_name', 'object_id', 'epoch', 'mean_motion', 'eccentricity', 'inclination',
@@ -39,7 +34,6 @@ class Command(BaseCommand):
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             writer.writeheader()
 
-            # Populate Satellites table and write data to CSV file
             for entry in data:
                 
                 if count == 600:
@@ -65,10 +59,8 @@ class Command(BaseCommand):
                     bstar=entry['BSTAR'],
                     mean_motion_dot=entry['MEAN_MOTION_DOT'],
                     mean_motion_ddot=entry['MEAN_MOTION_DDOT'],
-                    launch_country=random.choice(existing_countries)  # Choose from existing LaunchCountry instances
+                    launch_country=random.choice(existing_countries) 
                 )
-
-                # Write data to CSV file
                 writer.writerow({
                     'object_name': satellite.object_name,
                     'object_id': satellite.object_id,
