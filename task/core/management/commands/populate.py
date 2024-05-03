@@ -41,7 +41,7 @@ class Command(BaseCommand):
 
             # Populate Satellites table and write data to CSV file
             for entry in data:
-                count += 1
+                
                 if count == 600:
                     break
 
@@ -89,5 +89,6 @@ class Command(BaseCommand):
                     'mean_motion_ddot': satellite.mean_motion_ddot,
                     'launch_country': satellite.launch_country.name
                 })
+                count += 1
 
         self.stdout.write(self.style.SUCCESS('Satellites data populated successfully and CSV file created'))
