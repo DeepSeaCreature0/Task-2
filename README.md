@@ -25,7 +25,16 @@ Enter following details:
    * Username: gb
    * Password: gb
 
-The table will look like this when you open Satellites in the CORE section
-![image](https://github.com/DeepSeaCreature0/Task2/assets/138828627/3805bf82-a72c-4e40-a27e-f56ac97df12b)
+Note: The data will be checked once in 10 min, if new data is found the data is entered in the database.
+### LaunchCountry Table
+![image](https://github.com/DeepSeaCreature0/Task-2/assets/138828627/9b252c28-931e-4d36-b58e-1094e0bf1311)
+
+### Satellite Table
+![image](https://github.com/DeepSeaCreature0/Task-2/assets/138828627/307c4bef-41df-4dc9-98af-e774d21d2850)
+
+### Data Associated with each satellite
+![image](https://github.com/DeepSeaCreature0/Task-2/assets/138828627/fc4577db-38a9-4616-b89b-715947ae266f)
+
+Note: The data will keep increasing with time.
 
 The CSV File is also in the directory task/.
