@@ -6,6 +6,7 @@ python manage.py makemigrations
 python manage.py migrate
 
 # Populate the database
+python manage.py country
 python manage.py populate
 
 # Start Django server

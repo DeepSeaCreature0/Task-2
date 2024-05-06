@@ -79,10 +79,11 @@ def update_satellite_data(catnr):
 class Command(BaseCommand):
     help = 'Update satellite data from API'
     
-    while(1):
-        def handle(self, *args, **options):
-            catnrs = [900,902,1361,1512,1520,2826,2866,2872,2874,2909]
+    
+    def handle(self, *args, **options):
+        catnrs = [900,902,1361,1512,1520,2826,2866,2872,2874,2909]
+        while(1):
             for catnr in catnrs:
                 update_satellite_data(catnr)
-        time.sleep(600)
+            time.sleep(600)
 
