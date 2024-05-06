@@ -18,6 +18,9 @@ Open Exec tab in Docker and run this command to start populating data
 ```sh
 python manage.py populate
 ```
+![image](https://github.com/DeepSeaCreature0/Task-2/assets/138828627/0bd35669-fb99-4e33-a199-b9040a64b437)
+![image](https://github.com/DeepSeaCreature0/Task-2/assets/138828627/4de3911d-4efc-4669-acba-cc9e3acfefc7)
+
 
 ## To view Table
 1. Open admin page
@@ -41,4 +44,3 @@ Note: The data will be checked once in 10 min, if new data is found the data is 
 
 Note: The data will keep increasing with time.
 
-The CSV File is also in the directory task/.
