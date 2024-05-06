@@ -10,17 +10,21 @@ Run these commands after going to task/ directory
 ```sh
 docker build -t my_django_app .
 ```
-
 ```sh
 docker run -p 8000:8000 my_django_app
 ```
-When the docker file runs it will first populate the tables and then run server
+
+Open Exec tab in Docker and run this command to start populating data
+```sh
+python manage.py populate
+```
 
 ## To view Table
 1. Open admin page
 ```sh
 http://127.0.0.1:8000/admin
 ```
+
 Enter following details:
    * Username: gb
    * Password: gb
