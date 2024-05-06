@@ -42,5 +42,5 @@ Note: The data will be checked once in 10 min, if new data is found the data is 
 ### Data Associated with each satellite
 ![image](https://github.com/DeepSeaCreature0/Task-2/assets/138828627/fc4577db-38a9-4616-b89b-715947ae266f)
 
-Note: The data will keep increasing with time.
+Note: The data will keep increasing with time since the data from the API keep getting updated occasionally .
 
